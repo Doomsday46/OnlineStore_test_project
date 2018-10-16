@@ -1,44 +1,31 @@
-﻿
-@{
-    Layout = null;
-}
+﻿@{
+    Layout = "/views/Shared/_Layout.cshtml";
+}   
 
-<!DOCTYPE html>
+<h3>Оформление покупки</h3>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>View</title>
-</head>
-<body>
-    <div> 
-        <h3>Оформление покупки</h3>
+<br />
 
-        <br />
+<form method="post" action="">
+    <input type="hidden" name="IdPhone" value="@ViewBag.Id" />
 
-        <form method="post" action="">
-            <input type="hidden" name="IdPhone" value="@ViewBag.Id" />
-
-            <table
-                <tbody>
-                    <tr>
-                        <td>ФИО</td>
-                        <td><input type="text" name="FullName" /></td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td><input type="text" name="Email" /></td>
-                    </tr>
-                    <tr>
-                        <td>Адрес</td>
-                        <td><input type="text" name="Address" /></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><input type="submit" value="Оформить покупку"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </form>
-    </div>
-</body>
-</html>
+    <table>
+        <tbody>
+            <tr>
+                <td>ФИО</td>
+                <td><input type="text" name="FullName" /></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="Email" /></td>
+            </tr>
+            <tr>
+                <td>Адрес</td>
+                <td><input type="text" name="Address" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Оформить покупку"></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
