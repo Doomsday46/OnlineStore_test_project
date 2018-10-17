@@ -31,7 +31,7 @@ namespace OnlineStore.Models
 
         public bool UpdateUser(User instance)
         {
-            User cache = Db.User.Where(p => p.ID == instance.Id).FirstOrDefault();
+            User cache = Db.User.Where(p => p.Id == instance.Id).FirstOrDefault();
             if (cache != null)
             {
                 cache = instance;

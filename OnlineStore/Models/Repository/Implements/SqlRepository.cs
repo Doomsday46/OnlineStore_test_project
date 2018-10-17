@@ -6,6 +6,7 @@ using Ninject;
 using OnlineStore.App_Data;
 
 namespace OnlineStore.Models
+{ 
     public partial class SqlRepository : IRepository
     {
         [Inject]
