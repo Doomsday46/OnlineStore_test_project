@@ -1,4 +1,6 @@
-﻿using OnlineStore.Models;
+﻿using AutoMapper;
+using Ninject;
+using OnlineStore.Models;
 using OnlineStore.Models.service;
 using System;
 using System.Collections.Generic;
@@ -12,6 +14,7 @@ namespace OnlineStore.Controllers
     {
         PhoneContext phoneContext = new PhoneContext();
 
+       
         public ActionResult Index()
         {
             IEnumerable<Phone> phones = phoneContext.Phones;
@@ -40,18 +43,5 @@ namespace OnlineStore.Controllers
             return $"Ok, 200";
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

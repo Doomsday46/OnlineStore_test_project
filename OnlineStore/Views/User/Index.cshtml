@@ -1,17 +1,25 @@
-﻿
+﻿@model IList<OnlineStore.App_Data.User>
+
 @{
-    Layout = null;
+    ViewBag.Title = "Users";
+    Layout = "~/Areas/Default/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+<h2>Users</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-    </div>
-</body>
-</html>
+<p>
+    @foreach (var user in Model)
+    {
+        <div class="item">
+            <span class="id">
+                @user.Id
+            </span>
+            <span class="email">
+                @user.Email
+            </span>
+            <span class="activateDate">
+                @user.AddedDate
+            </span>
+        </div>
+    }
+</p>

@@ -1,8 +1,8 @@
 ﻿<h2>Register</h2>
+@model OnlineStore.Models.UserView
 @using (Html.BeginForm("Register", "User", FormMethod.Post, new { @class = "form-horizontal" }))
 {
     @Html.ValidationSummary()
-
     <fieldset>
         <div class="control-group">
             <label class="control-label" for="Email">

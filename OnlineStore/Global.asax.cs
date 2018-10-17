@@ -28,10 +28,6 @@ namespace OnlineStore
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        private static void RegisterServices(IKernel kernel)
-        {
-            kernel.Bind<AuthDBDataContext>().ToMethod(c => new AuthDBDataContext(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString));
-            kernel.Bind<IRepository>().To<SqlRepository>();
-        }
+      
     }
 }
