@@ -23,7 +23,7 @@ namespace OnlineStore.App_Data
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="AuthDB")]
-	public partial class DataClasses1DataContext : System.Data.Linq.DataContext
+	public partial class AuthDBDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -41,31 +41,31 @@ namespace OnlineStore.App_Data
     partial void DeleteUserRole(UserRole instance);
     #endregion
 		
-		public DataClasses1DataContext() : 
+		public AuthDBDataContext() : 
 				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["AuthDBConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(string connection) : 
+		public AuthDBDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(System.Data.IDbConnection connection) : 
+		public AuthDBDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public AuthDBDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public AuthDBDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();

@@ -195,17 +195,20 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="App_Data\DataClasses1.designer.cs">
+    <Compile Include="App_Data\AuthDB.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
+      <DependentUpon>AuthDB.dbml</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DBInitialazer.cs" />
-    <Compile Include="Models\Entity\Role.cs" />
-    <Compile Include="Models\Repository\Implements\SqlRoleRepository.cs" />
+    <Compile Include="Models\Repository\Implements\Proxy\User.cs" />
+    <Compile Include="Models\Repository\Implements\SqlRepository\User.cs" />
+    <Compile Include="Models\Repository\Implements\SqlRepository\Role.cs" />
+    <Compile Include="Models\Repository\Implements\SqlRepository.cs" />
+    <Compile Include="Models\Repository\Implements\SqlRepository\UserRole.cs" />
     <Compile Include="Models\Repository\IRepository.cs" />
     <Compile Include="Models\Entity\Phone.cs" />
     <Compile Include="Models\Entity\Purchase.cs" />
@@ -224,14 +227,16 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="App_Data\DataClasses1.dbml">
+    <Content Include="App_Data\AuthDB.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <LastGenOutput>AuthDB.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <None Include="App_Data\DataClasses1.dbml.layout">
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    <None Include="App_Data\AuthDB.dbml.layout">
+      <DependentUpon>AuthDB.dbml</DependentUpon>
     </None>
+    <Content Include="table.snippet" />
+    <Content Include="sqlTable.snippet" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
